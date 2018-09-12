@@ -5,31 +5,32 @@
 </template>
 
 <script>
-import lottie from '../components/lottie.vue'
-import * as animation from '../assets/coming_soon.json'
+import lottie from "vue-lottie";
+import * as animation from "../assets/coming_soon.json";
 
 export default {
-  name: 'HomePage',
+  name: "HomePage",
   components: {
-    'lottie': lottie
+    lottie
   },
-  data () {
+  data() {
     return {
-      defaultOptions: {animationData: animation},
-      animationSpeed: 0.4,
-    }
+      defaultOptions: { animationData: animation },
+      animationSpeed: 0.4
+    };
   },
   methods: {
-    handleAnimation: function (anim) {
+    handleAnimation: function(anim) {
       this.anim = anim;
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
