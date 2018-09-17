@@ -13,7 +13,7 @@ import * as animation from '../assets/coming_soon.json'
 
 import lottie from 'vue-lottie'
 
-import Avatar from '@components/Avatar'
+import Avatar from '@components/Avatar/Avatar'
 import SidePanel from '@components/Panels/SidePanel'
 import MainPanel from '@components/Panels/MainPanel'
 import TopPanel from '@components/Panels/TopPanel'

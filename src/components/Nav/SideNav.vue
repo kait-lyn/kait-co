@@ -1,16 +1,28 @@
 <template>
 
     <div id="sideNav" class='nav-bar'>
+      <div class="top">
+        <Avatar
+          imageUrl="https://image.ibb.co/cstJQU/me.gif"
+          :size="180"
+        />
+        <span class="dash"> ____ </span>
+        <span class="name"> KAITLYN LY </span>
+        <span class="title">Software Engineer</span>
+      </div>
 
-      <Avatar
-        imageUrl="https://image.ibb.co/cstJQU/me.gif"
-        :size="180"
-      />
+      <div class="bottom">
+          <a
+            v-for="social in social"
+            :key="social.name"
+            :href="social.href"
+            target="_blank"
+            class="icon-link"
+          >
+            <img :src="social.logo" height="36px" width="36px"/>
+          </a>
 
-      <span class="dash"> ____ </span>
-      <span class="name"> KAITLYN LY </span>
-      <span class="title">Software Engineer</span>
-
+      </div>
     </div>
 </template>
 
@@ -27,6 +39,23 @@ export default {
     Icon,
     IconMenu,
   },
+
+  data () {
+    return {
+      social: [
+        {
+          name: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/k8lyn/',
+          logo: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png',
+        },
+        {
+          name: 'GitHub',
+          href: 'https://github.com/kait-lyn/',
+          logo: 'https://image.flaticon.com/icons/svg/25/25231.svg',
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -40,8 +69,22 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     padding: $gp;
     width: 280px;
+
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bottom {
+      padding-bottom: $gp * 3;
+      display: flex;
+      justify-content: space-around;
+      width: 70%;
+    }
   }
 
   .dash {
@@ -56,6 +99,18 @@ export default {
 
   .title {
     margin-bottom: $gp * 8;
+  }
+
+  .icon-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+  }
+
+  .icon-link:hover{
+    align-items: flex-end;
   }
 
 </style>
