@@ -91,7 +91,7 @@ export default {
 
     @media only screen and (max-width: $small) {
       width: 100vw;
-      height: 60px;
+      height: 80px;
       padding: 0 $gp;
       flex-direction: row;
 
