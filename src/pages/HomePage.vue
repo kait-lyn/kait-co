@@ -96,7 +96,8 @@ export default {
             'Continuous integration and deployment experience: Circle CI configs, Firebase deployments to test and production environments',
             'Experience with software testing: unit testing, integration testing, and end to end regression testing using Selenium & Nightwatch',
             'Agile development: sprint grooming, planning, pointing, and retrospectives',
-            'Experience with Google Cloud Platform, Firebase',
+            'Experience with Google Cloud Platform',
+            'Google Firebase: Firestore & Firebase Realtime Database, Deploying & Hosting',
           ]
         },
         {
@@ -167,6 +168,10 @@ export default {
       font-weight: bold;
       display: flex;
       justify-content: space-between;
+
+      @media only screen and (max-width: $small) {
+        flex-direction: column;
+      }
     }
 
     ul {

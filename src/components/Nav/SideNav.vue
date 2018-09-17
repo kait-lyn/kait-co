@@ -91,7 +91,8 @@ export default {
 
     @media only screen and (max-width: $small) {
       width: 100vw;
-      height: 80px;
+      height: 60px;
+      padding: 0 $gp;
       flex-direction: row;
 
       .avatar-container {
@@ -100,43 +101,45 @@ export default {
 
       .top {
         flex-direction: row;
+        flex-grow: 3;
+
+        .name {
+          font-size: 1.5em;
+          width: 35vw;
+        }
       }
 
       .bottom {
         padding-bottom: 0;
+        flex-grow: 1;
+      }
+
+      .dash {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+      }
+
+      .title {
+        margin-bottom: 0;
+        font-size: 1em;
+        width: 35vw;
       }
     }
   }
 
   .dash {
     font-size: 2em;
-
-    @media only screen and (max-width: $small) {
-      visibility: hidden;
-      height: 0;
-      width: 0;
-    }
   }
 
   .name {
     font-family: 'Bellefair', serif;
     padding: $gp;
     font-size: 2em;
-
-    @media only screen and (max-width: $small) {
-      font-size: 1.5em;
-      width: 33vw;
-    }
   }
 
   .title {
     margin-bottom: $gp * 8;
-
-    @media only screen and (max-width: $small) {
-      margin-bottom: 0;
-      font-size: 1em;
-      width: 33vw;
-    }
   }
 
   .icon-link{
