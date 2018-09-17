@@ -6,7 +6,8 @@ module.exports = {
     parser: 'babel-eslint'
   },
   env: {
-    browser: true,
+    node: true,
+    node: true,
   },
   extends: [
     // https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
@@ -17,7 +18,8 @@ module.exports = {
   ],
   // required to lint *.vue files
   plugins: [
-    'vue'
+    'vue',
+    'import',
   ],
   // add your custom rules here
   rules: {
@@ -27,9 +29,5 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     // allow comma-dangle
     'comma-dangle': 'off',
-    'semi': 'off',
-    'space-before-function-paren': 'warn',
-    'quotes': 'warn',
-    'no-unused-vars': 'warn',
   }
 }
