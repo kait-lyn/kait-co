@@ -29,7 +29,8 @@
 <script>
 import Avatar from '@components/Avatar/Avatar'
 import Icon from '@components/Icons/Icon.vue'
-import IconMenu from '@components/Icons/IconMenu.vue'
+import IconGitHub from '@components/Icons/IconGitHub.vue'
+import IconLinkedIn from '@components/Icons/IconLinkedIn.vue'
 
 export default {
   name: 'Nav',
@@ -37,7 +38,8 @@ export default {
   components: {
     Avatar,
     Icon,
-    IconMenu,
+    IconGitHub,
+    IconLinkedIn,
   },
 
   data () {

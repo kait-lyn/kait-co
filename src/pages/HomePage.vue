@@ -9,10 +9,17 @@
         </div>
       </section>
 
-      <section v-if="false">
+      <section>
         <h1>Experience</h1>
         <div class="section-content">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, libero perferendis mollitia molestias tenetur, quas labore asperiores fuga pariatur aut aspernatur blanditiis atque, laudantium facere. Omnis tenetur nesciunt temporibus nihil?
+          <div v-for="item in experience" :key="item" class="experience">
+            <div class="title">
+              {{item.title}}
+            </div>
+            <ul>
+              <li v-for="experience in item.list" :key="experience"> {{experience}} </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -63,6 +70,20 @@ export default {
   },
   data () {
     return {
+      experience: [
+        {
+          title: 'Languages',
+          list: ['Vue JS', 'Javascript', 'HTML', 'CSS', 'Python', 'Java', 'React Native'],
+        },
+        {
+          title: 'Frameworks & Tools',
+          list: ['Vuex', 'Vue Cli', 'Selenium', 'Nightwatch', 'Twilio', 'Circle CI', 'JFrog Artifactory', 'Karma', 'Google Cloud Platform', 'GCP cloud functions'],
+        },
+        {
+          title: 'General',
+          list: ['Mac & PC', 'Adobe CC Suite: Photoshop, Illustrator, After Effects, XD', 'Microsoft Office'],
+        }
+      ],
       workExperience: [
         {
           company: 'Infusionsoft',
@@ -70,15 +91,12 @@ export default {
           start: 'May 2017',
           finish: 'Present',
           tasks: [
-            'Fullstack with emphasis on front-end',
-            'Created feature-based component library from scratch, with full CICD integration and unit testing',
-            'Agile (scrum) experience; participated in sprint grooming, planning, and retrospectives',
-            'Update backend API\'s to reconcile deleted Salesforce data',
-            'Firebase deployments to sand and production environments',
-            'API integration with Twilio',
-            'Experience with Google Cloud Platform',
-            'Set up Circle CI 2.0 configs for front-end repos',
-            'Participated in planning and pointing of user stories, and utilizing user feedback to implement changes'
+            'Fullstack software engineer for SaaS products',
+            'Vue JS, React Native, Java, Node, Polymer, CSS & Sass',
+            'Continuous integration and deployment experience: Circle CI configs, Firebase deployments to test and production environments',
+            'Experience with software testing: unit testing, integration testing, and end to end regression testing using Selenium & Nightwatch',
+            'Agile development: sprint grooming, planning, pointing, and retrospectives',
+            'Experience with Google Cloud Platform, Firebase',
           ]
         },
         {
@@ -87,9 +105,8 @@ export default {
           start: 'July 2016',
           finish: 'May 2016',
           tasks: [
-            'Writing python test scripts to test flight control computers for client aircraft',
-            'Created training documents',
-            'Documented company engineering processes',
+            'Wrote python test scripts to test flight control computers for our client\'s aircraft',
+            'Documented company engineering processes and created training documents',
           ]
         },
         {
@@ -138,14 +155,29 @@ export default {
     border-bottom: 6px solid $color-lighterGray;
   }
 
-  .job {
+  .job, .experience {
     padding-left: $gp * 2;
 
     .title {
-      font-weight: lighter;
-      font-size: 1.25em;
+      text-transform: uppercase;
+      font-weight: bold;
       display: flex;
       justify-content: space-between;
+    }
+
+    ul {
+      margin-top: $gp;
+      margin-bottom: $gp * 3;
+    }
+  }
+
+  .experience {
+    li {
+      display: inline;
+    }
+
+    li:before {
+        content: '•';
     }
   }
 </style>
