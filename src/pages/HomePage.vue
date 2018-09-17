@@ -12,7 +12,7 @@
       <section>
         <h1>Experience</h1>
         <div class="section-content">
-          <div v-for="item in experience" :key="item" class="experience">
+          <div v-for="item in experience" :key="item.title" class="experience">
             <div class="title">
               {{item.title}}
             </div>
@@ -148,6 +148,10 @@ export default {
     padding: $gp * 4;
     color: $color-darkerGray;
     overflow: auto;
+
+    @media only screen and (max-width: $small) {
+      padding: $gp;
+    }
   }
 
   h1 {

@@ -5,6 +5,7 @@
         <Avatar
           imageUrl="https://image.ibb.co/cstJQU/me.gif"
           :size="180"
+          class="avatar-container"
         />
         <span class="dash"> ____ </span>
         <span class="name"> KAITLYN LY </span>
@@ -33,7 +34,7 @@ import IconGitHub from '@components/Icons/IconGitHub.vue'
 import IconLinkedIn from '@components/Icons/IconLinkedIn.vue'
 
 export default {
-  name: 'Nav',
+  name: 'SideNav',
 
   components: {
     Avatar,
@@ -87,20 +88,55 @@ export default {
       justify-content: space-around;
       width: 70%;
     }
+
+    @media only screen and (max-width: $small) {
+      width: 100vw;
+      height: 80px;
+      flex-direction: row;
+
+      .avatar-container {
+        display: none;
+      }
+
+      .top {
+        flex-direction: row;
+      }
+
+      .bottom {
+        padding-bottom: 0;
+      }
+    }
   }
 
   .dash {
     font-size: 2em;
+
+    @media only screen and (max-width: $small) {
+      visibility: hidden;
+      height: 0;
+      width: 0;
+    }
   }
 
   .name {
     font-family: 'Bellefair', serif;
     padding: $gp;
     font-size: 2em;
+
+    @media only screen and (max-width: $small) {
+      font-size: 1.5em;
+      width: 33vw;
+    }
   }
 
   .title {
     margin-bottom: $gp * 8;
+
+    @media only screen and (max-width: $small) {
+      margin-bottom: 0;
+      font-size: 1em;
+      width: 33vw;
+    }
   }
 
   .icon-link{

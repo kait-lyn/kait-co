@@ -1,0 +1,13 @@
+// MIXINS
+@mixin bordered-box-shadow() {
+  box-shadow: $shadow-2, $shadow-3, $shadow-4; 
+};
+@mixin box-shadow() {
+  box-shadow: $shadow-1;
+};
+
+@mixin card() {
+  background-color: $color-white;
+  padding: $gp;
+  box-shadow: $shadow-2;
+}
