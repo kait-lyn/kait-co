@@ -1,47 +1,34 @@
 <template>
-  <div class="hello">
-    <lottie :options="defaultOptions" :height="500" :width="500" v-on:animCreated="handleAnimation"/>
+  <div class="container">
+    <div class="content">
+      Coming soon...
+    </div>
   </div>
 </template>
 
 <script>
-import lottie from "vue-lottie";
-import * as animation from "../assets/coming_soon.json";
-
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   components: {
-    lottie
   },
-  data() {
+  data () {
     return {
-      defaultOptions: { animationData: animation },
-      animationSpeed: 0.4
-    };
-  },
-  methods: {
-    handleAnimation: function(anim) {
-      this.anim = anim;
     }
-  }
-};
+  },
+}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1,
-h2 {
-  font-weight: normal;
+<style lang="scss" scoped>
+@import '@styles/main.scss';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-lightestGray;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.content {
+  flex-grow: 1;
+  padding: $gp * 4;
 }
 </style>
