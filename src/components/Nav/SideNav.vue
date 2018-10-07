@@ -10,6 +10,12 @@
         <span class="dash"> ____ </span>
         <span class="name"> KAITLYN LY </span>
         <span class="title">Software Engineer</span>
+
+        <div class="fullsize-links">
+          <a href="/">Resume</a>
+          <a href="/projects">Projects</a>
+          <a href="/presentations">Presentations</a>
+        </div>
       </div>
 
       <div class="bottom">
@@ -80,6 +86,24 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: center;
+      flex-shrink: 1;
+
+      .fullsize-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        a {
+          padding-top: $gp * 2;
+          text-decoration: none;
+          color: $color-darkerGray;
+        }
+
+        a:hover {
+          color: $color-lightGray;
+        }
+      }
     }
 
     .bottom {
