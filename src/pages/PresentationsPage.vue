@@ -4,9 +4,9 @@
         <h1>Presentations</h1>
         <a href="https://docs.google.com/presentation/d/1sFObDbY0ZwU1UCDzWBFmTu-lkpaSDQKZ67iaNARBDMM/edit?usp=sharing" target="_blank">
           <div class="presentation">
-            <span class="what">Circle CI Demo</span>
-            <span class="when">October 6th, 2018</span>
-            <span class="where">Desert Code Camp @ CGCC</span>
+            <span><h3>Circle CI Demo</h3></span>
+            <span>October 6th, 2018</span>
+            <span>Desert Code Camp @ CGCC</span>
           </div>
         </a>
     </div>
@@ -47,6 +47,10 @@ export default {
   h1 {
     font-weight: 500;
     border-bottom: 6px solid $color-lighterGray;
+  }
+
+  h3 {
+    margin: 0 0 $gp 0;
   }
 
   a {

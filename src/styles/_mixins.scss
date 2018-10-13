@@ -2,6 +2,7 @@
 @mixin bordered-box-shadow() {
   box-shadow: $shadow-2, $shadow-3, $shadow-4; 
 };
+
 @mixin box-shadow() {
   box-shadow: $shadow-1;
 };
