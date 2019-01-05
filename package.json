@@ -20,6 +20,7 @@
     "vue-burger-menu": "^1.0.9",
     "vue-lottie": "^0.2.1",
     "vue-md-icons": "^1.2.0",
+    "vue-parallaxy": "^1.1.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

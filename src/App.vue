@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar class="nav-bar" />
+    <nav-bar v-if="showNav" class="nav-bar" />
     <router-view class="router-view-container" />
   </div>
 </template>
@@ -10,8 +10,21 @@ import NavBar from '@components/Nav/NavBar'
 
 export default {
   name: 'App',
+
   components: {
     NavBar,
+  },
+
+  data () {
+    return {
+      showNav: true,
+    }
+  },
+
+  created () {
+    if (this.$route.path === '/test') {
+      this.showNav = false
+    }
   },
 }
 </script>
@@ -47,6 +60,5 @@ export default {
   .router-view-container {
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
   }
 </style>
