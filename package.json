@@ -17,6 +17,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "vue": "^2.5.2",
+    "vue-burger-menu": "^1.0.9",
     "vue-lottie": "^0.2.1",
     "vue-md-icons": "^1.2.0",
     "vue-router": "^3.0.1"
@@ -65,7 +66,7 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "^2.9.1",
+    "webpack-dev-server": ">=3.1.11",
     "webpack-merge": "^4.1.0"
   },
   "engines": {

@@ -104,7 +104,7 @@ export default {
           company: 'Performance Software',
           title: 'Engineering Intern',
           start: 'July 2016',
-          finish: 'May 2016',
+          finish: 'May 2017',
           tasks: [
             'Wrote python test scripts to test flight control computers for our client\'s aircraft',
             'Documented company engineering processes and created training documents',

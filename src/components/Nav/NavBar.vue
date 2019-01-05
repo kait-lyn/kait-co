@@ -1,36 +1,60 @@
 <template>
+  <div id="nav" class="side-nav">
+    <div class="top">
+      <Avatar
+        imageUrl="https://image.ibb.co/cstJQU/me.gif"
+        :size="180"
+        class="avatar-container"
+      />
+      <span class="dash"> ____ </span>
+      <span class="name"> KAITLYN LY </span>
+      <span class="title">Software Engineer</span>
 
-    <div id="sideNav" class='nav-bar'>
-      <div class="top">
-        <Avatar
-          imageUrl="https://image.ibb.co/cstJQU/me.gif"
-          :size="180"
-          class="avatar-container"
-        />
-        <span class="dash"> ____ </span>
-        <span class="name"> KAITLYN LY </span>
-        <span class="title">Software Engineer</span>
-
-        <div class="fullsize-links">
-          <a href="/">Resume</a>
-          <a href="/projects">Projects</a>
-          <a href="/presentations">Presentations</a>
-        </div>
+      <div class="fullsize-links">
+        <a href="/">Resume</a>
+        <a href="/projects">Projects</a>
+        <a href="/presentations">Presentations</a>
       </div>
 
-      <div class="bottom">
-          <a
-            v-for="social in social"
-            :key="social.name"
-            :href="social.href"
-            target="_blank"
-            class="icon-link"
-          >
-            <img :src="social.logo" height="36px" width="36px"/>
+      <div class="mobile-links">
+        <Slide noOverlay class="burger-menu">
+          <a href="/">
+            <span>Resume</span>
+          </a>
+          <a href="/projects">
+            <span>Projects</span>
+          </a>
+          <a href="/presentations">
+            <span>Presentations</span>
           </a>
 
+          <div class="mobile-bottom">
+            <a
+              v-for="social in social"
+              :key="social.name"
+              :href="social.href"
+              target="_blank"
+              class="icon-link"
+            >
+              <img :src="social.logo" height="36px" width="36px"/>
+            </a>
+          </div>
+        </Slide>
       </div>
     </div>
+
+    <div class="bottom">
+      <a
+        v-for="social in social"
+        :key="social.name"
+        :href="social.href"
+        target="_blank"
+        class="icon-link"
+      >
+        <img :src="social.logo" height="36px" width="36px"/>
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -38,15 +62,17 @@ import Avatar from '@components/Avatar/Avatar'
 import Icon from '@components/Icons/Icon.vue'
 import IconGitHub from '@components/Icons/IconGitHub.vue'
 import IconLinkedIn from '@components/Icons/IconLinkedIn.vue'
+import { Slide } from 'vue-burger-menu'
 
 export default {
-  name: 'SideNav',
+  name: 'NavBar',
 
   components: {
     Avatar,
     Icon,
     IconGitHub,
     IconLinkedIn,
+    Slide
   },
 
   data () {
@@ -71,7 +97,7 @@ export default {
 <style lang="scss" scoped>
   @import '@styles/main.scss';
 
-  .nav-bar {
+  #nav {
     @include box-shadow;
     z-index: 2;
     background-color: $color-white;
@@ -104,6 +130,10 @@ export default {
           color: $color-lightGray;
         }
       }
+
+      .mobile-links {
+        display: none;
+      }
     }
 
     .bottom {
@@ -115,7 +145,8 @@ export default {
 
     @media only screen and (max-width: $small) {
       width: 100vw;
-      height: 80px;
+      height: 90px;
+      min-height: 90px;
       padding: 0 $gp;
       flex-direction: row;
 
@@ -126,16 +157,29 @@ export default {
       .top {
         flex-direction: row;
         flex-grow: 3;
+        justify-content: flex-end;
 
         .name {
-          font-size: 1.5em;
-          width: 35vw;
+          font-size: 2em;
+          padding-right: $gp * 4;
+        }
+
+        .title {
+          display: none;
+        }
+
+        .fullsize-links {
+          display: none;
+        }
+
+        .mobile-links {
+          display: flex;
+          justify-content: flex-end;
         }
       }
 
       .bottom {
-        padding-bottom: 0;
-        flex-grow: 1;
+        display: none;
       }
 
       .dash {
@@ -177,5 +221,4 @@ export default {
   .icon-link:hover{
     align-items: flex-end;
   }
-
 </style>

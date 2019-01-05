@@ -1,8 +1,11 @@
 <template>
   <div class="container">
-    <div class="content">
-        <h1>Projects</h1>
-        Coming soon!
+      <div class="content">
+        <div class="image">
+          <img src="../assets/1x/Artboard 1.png">
+        </div>
+      <h1>Projects</h1>
+      Coming soon!
     </div>
   </div>
 </template>
@@ -25,6 +28,10 @@ export default {
     display: flex;
     flex-direction: row;
     background-color: $color-lightestGray;
+
+    @media only screen and (max-width: $small) {
+      overflow-x: none;
+    }
   }
 
   .content {
@@ -36,6 +43,11 @@ export default {
     @media only screen and (max-width: $small) {
       padding: $gp;
     }
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
   }
 
   h1 {
