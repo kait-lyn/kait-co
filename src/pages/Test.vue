@@ -5,8 +5,8 @@
         <div class="layer2"></div>
         <div class="layer3"></div>
         <div class="layer4"></div>
-        <div class="layer5"></div>
     </header>
+        <div class="layer5"></div>
 
     <section class="content">
       <!-- Add your content here -->
@@ -20,13 +20,7 @@
 </template>
 
 <script>
-import Parallax from 'vue-parallaxy'
-
 export default {
-  components: {
-    Parallax,
-  },
-
   created () {
     // window.addEventListener('scroll', this.handleScroll)
     window.addEventListener('scroll', this.handleScroll, true)
@@ -67,7 +61,7 @@ export default {
   @import '@styles/main.scss';
 
   .layer0 {
-      height: 1200px;
+      height:800px;
       width: 100vw;
       position: relative;
       background: url(../images/layer0.png);
