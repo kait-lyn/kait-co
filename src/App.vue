@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <side-nav class="side-nav" />
+    <nav-bar class="nav-bar" />
     <router-view class="router-view-container" />
   </div>
 </template>
 
 <script>
-import SideNav from '@components/Nav/SideNav'
+import NavBar from '@components/Nav/NavBar'
 
 export default {
   name: 'App',
   components: {
-    SideNav,
+    NavBar,
   },
 }
 </script>
@@ -40,10 +40,13 @@ export default {
     @media only screen and (max-width: $small) {
       flex-direction: column;
       width: 100%;
+      overflow-y: none;
     }
   }
 
   .router-view-container {
     width: 100%;
+    height: 100%;
+    overflow-y: hidden;
   }
 </style>
