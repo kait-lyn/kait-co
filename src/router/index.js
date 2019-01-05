@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import ResumePage from '@pages/ResumePage'
 import ProjectsPage from '@pages/ProjectsPage'
 import PresentationsPage from '@pages/PresentationsPage'
+import Test from '@pages/Test'
 // import ResumePage from '@pages/ResumePage'
 
 Vue.use(Router)
@@ -26,8 +27,13 @@ export default new Router({
     },
     {
       path: '*',
-      name: 'ResumePage',
+      name: 'any',
       component: ResumePage,
+    },
+    {
+      path: '/test',
+      name: 'Test',
+      component: Test,
     },
   ],
   mode: 'history'
