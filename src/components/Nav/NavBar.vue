@@ -208,6 +208,7 @@ export default {
 
   .title {
     margin-bottom: $gp * 8;
+    margin-top: $gp;
   }
 
   .icon-link{
