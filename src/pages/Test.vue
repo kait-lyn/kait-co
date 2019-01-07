@@ -133,11 +133,11 @@ export default {
 
   .layer5 {
       background-image: url(../images/layer5.png);
-      height: 100vh;
+      height: 1100px;
       width: 100vw;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center top;
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      background-position: top center;
       position: absolute;
       top: 20%;
   }
