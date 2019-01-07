@@ -5,8 +5,8 @@
         <div class="layer2"></div>
         <div class="layer3"></div>
         <div class="layer4"></div>
-    </header>
         <div class="layer5"></div>
+    </header>
 
     <section class="content">
       <!-- Add your content here -->
